@@ -1,9 +1,12 @@
 """
 This is the doc string for the module/script.
 """
+# standard library imports
 import sys
 
-# other imports  (standard library, standard non-library, local)
+# installed library imports
+
+# local library imports
 
 # constants (AKA global variables -- keep these to a minimum)
 

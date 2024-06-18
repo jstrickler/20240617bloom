@@ -14,6 +14,7 @@ print(f"now: {now}")
 print(f"now.year: {now.year}")
 print(f"now.month: {now.month}")
 print(f"now.day: {now.day}")
+print(f"now.hour: {now.hour}")
 print(f"now.minute: {now.minute}")
 print(f"now.second: {now.second}")
 print(f"now.microsecond: {now.microsecond}")
@@ -26,3 +27,12 @@ delta = d2 - d1  # date objects can be subtracted from other date objects
 print(f"delta: {delta}")  # timedelta has days, seconds, and microseconds
 print(f"delta.days: {delta.days}")
 
+jay_bd = date(2014, 8, 1)
+jay_elapsed_time = today - jay_bd
+print(f"{jay_elapsed_time = }")
+jay_age = jay_elapsed_time.days / 365
+print(f"{jay_age = }")
+
+print(jay_bd.strftime('%x'))
+print(jay_bd.strftime('%B %d, %Y'))
+print(f"{jay_bd.month = }")

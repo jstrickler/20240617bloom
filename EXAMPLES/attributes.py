@@ -14,6 +14,7 @@ print("hasattr()", hasattr(s, 'eggs'))  # check whether attribute exists
 e = getattr(s, 'eggs')  # retrieve attribute
 e("scrambled")
 
+x = 5 * 10
 
 def toast(self, msg):
     print("toast!", msg)

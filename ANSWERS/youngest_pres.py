@@ -1,6 +1,5 @@
 import datetime
 
-
 def make_date(date_string):
     raw_year, raw_month, raw_day = date_string.split('-')
     year = int(raw_year)
@@ -8,7 +7,6 @@ def make_date(date_string):
     day = int(raw_day)
 
     return datetime.date(year, month, day)
-
 
 all_presidents = []
 

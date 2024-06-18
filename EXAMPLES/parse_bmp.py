@@ -10,6 +10,7 @@ with open('../DATA/chimp.bmp', 'rb') as chimp_in:
 (sig1, sig2, size, reserved1, reserved2, offset) = s.unpack(chimp_bmp)  # unpack the binary header into individual values
 
 print("signature:", (sig1 + sig2).decode())  # output the individual values
+print("s.size:", s.size)
 print('size:', size)
 print('reserved1:', reserved1)
 print('reserved2:', reserved2)

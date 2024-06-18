@@ -1,4 +1,4 @@
-from datetime import date as Date
+from datetime import date
 import calendar
 
 test_dates = (
@@ -8,7 +8,7 @@ test_dates = (
 )
 
 for year, month, day in test_dates:
-    dt = Date(year, month, day)
+    dt = date(year, month, day)
     wday = calendar.weekday(year, month, day)
     wday_name = calendar.day_name[wday]
     is_leapyear = calendar.isleap(year)

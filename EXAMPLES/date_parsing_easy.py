@@ -13,6 +13,7 @@ date_strings = [  # list of assorted date strings
     '     2-1-21     ',
     '02/01/2021',
     '1 Feb 2021',
+    'June 47, 1869',
     'February 1st, 2021',
     'February 1, 2021 8:09',
     '2/1/2021 8:09 PM',
@@ -20,6 +21,8 @@ date_strings = [  # list of assorted date strings
     'Febrifuge 1, 2021',
     '    2/1/21',
     'abc 2/1/21',
+    'July 4, 1776',
+    '4 July 1976'
 ]
 
 for date_string in date_strings:
