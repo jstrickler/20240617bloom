@@ -1,4 +1,6 @@
 """Sort titles, ignoring leading articles"""
+from bookutils import strip_article
+
 books = [
     "A Study in Scarlet",
     "The Sign of the Four",
@@ -11,15 +13,6 @@ books = [
     "The Case-Book of Sherlock Holmes",
 ]
 
-
-def strip_article(title):  # create function which takes element to compare and returns comparison key
-    title = title.lower()
-    for article in 'a ', 'an ', 'the ':
-        if title.startswith(article):
-            title = title.removeprefix(article)  # remove article
-            break
-    return title
-
-
 for book in sorted(books, key=strip_article):  # sort using custom function
     print(book)
+

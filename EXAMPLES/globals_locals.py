@@ -15,3 +15,12 @@ def eggs(fruit):  # function parameters are local
 
 
 eggs('mango')
+
+g = globals()
+g['animal'] = "wombat"  # create a new variable, same as     animal = "wombat"
+
+print(f"{animal = }")
+
+g['bark'] = lambda : print("woof woof")
+
+bark()

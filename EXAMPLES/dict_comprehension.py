@@ -16,3 +16,6 @@ capitals = {'NY': 'ALBANY', 'NC': 'RALEIGH', 'CA': 'SACRAMENTO', 'VT': 'MONTPELI
 caps = {state: capital.title() for state, capital in capitals.items()}
 pprint(caps)
 
+c2 = {capital: state for state, capital in capitals.items()}
+print(f"{c2 = }\n")
+
