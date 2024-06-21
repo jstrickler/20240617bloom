@@ -1,4 +1,3 @@
-
 from glob import glob
 
 files = glob('../DATA/*.txt') # expand file name wildcard into sorted list of matching names

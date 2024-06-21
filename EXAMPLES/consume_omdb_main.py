@@ -4,10 +4,10 @@ import time
 from nfrtitles import get_nfr_title_list
 import consume_omdb_threads
 import consume_omdb_procs
-import consume_omdb_cf_threads
+import consume_omdb_cf_threads  # concurrent futures
 import consume_omdb_cf_procs
-import consume_omdb_async
-import consume_omdb_serial
+import consume_omdb_async  # asynchronous
+import consume_omdb_serial # one-at-a-time
 
 MODULES = (
     consume_omdb_threads,

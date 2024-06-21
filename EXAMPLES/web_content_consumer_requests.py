@@ -7,19 +7,20 @@ BASE_URL = 'https://www.dictionaryapi.com/api/v3/references/collegiate/json/'  #
 with open('dictionaryapikey.txt') as api_key_in:
     API_KEY = api_key_in.read().rstrip()  # get credentials
 
-
 def main(args):
     if len(args) < 1:
-        print("Please specify a search term")
+        print("Please specify a search term", file=sys.stderr)
         sys.exit(1)
 
     response = requests.get(
         BASE_URL + args[0],
-        params={'key': API_KEY},
+        params={'key': API_KEY},  # -->   ?key=API_KEY*p2=v2&p3=v3  GET parameters
+        headers={'api-key': API_KEY},
+        timeout=10,
         # ssl, proxy, cookies, headers, etc.
     )  # send HTTP request and get HTTP response
 
-    if response.status_code == requests.codes.OK:  # 200?
+    if response.ok:
         data = response.json()  # convert JSON content to Python data structure
         for entry in data: # check for results
             if isinstance(entry, dict):

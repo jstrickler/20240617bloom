@@ -7,16 +7,19 @@ url = 'https://www.nasa.gov/wp-content/uploads/2021/12/sls_fact_sheet.pdf'  # ta
 saved_pdf_file = 'nasa.pdf'  # name of PDF file for saving
 
 response = requests.get(url)  # open the URL
-if response.ok:  # check status code
+if response.ok:  # check status code    (if response.statuscode == 200)
     if response.headers.get('content-type') == 'application/pdf':
         with open(saved_pdf_file, 'wb') as pdf_out:  # open local file
             pdf_out.write(response.content)  # write data to a local file in binary mode; response.content is data from URL
 
-        if sys.platform == 'win32':  # select platform and choose the app to open the PDF file
-            cmd = saved_pdf_file
-        elif sys.platform == 'darwin':
-            cmd = 'open ' + saved_pdf_file
+        # select platform and choose the app to open the PDF file
+        if sys.platform == 'win32':  
+            open_cmd = "cmd /c"
+        elif sys.platform == 'darwin':  # Mac
+            open_cmd = "open"
         else:
-            cmd = 'acroread ' + saved_pdf_file
+            open_cmd = "acroread"
 
+        cmd = f"{open_cmd} {saved_pdf_file}"
         run(cmd, shell=True)  # run command with command.exe or Mac/Linux shell
+        # NOTE: "shell=True" not needed on Windows but is required on 

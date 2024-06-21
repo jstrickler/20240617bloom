@@ -8,6 +8,7 @@ def main():
 
     for date in DATES:
         fetch_apod(date)
+
     end_time = time.perf_counter()
     elapsed = end_time - start_time
     print(f"That took {elapsed} seconds")
