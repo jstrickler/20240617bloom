@@ -1,6 +1,6 @@
 from timeit import Timer
 
-REPEATS = 1000
+REPEATS = 10000
 
 setup_code = """
 import re

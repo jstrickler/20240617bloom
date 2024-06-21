@@ -3,9 +3,9 @@ import pymssql  #  pip install pymssql
 
 conn = pymssql.connect(
     host="host",
-    db="database",
+    database="database",
     user="username",
-    passwd="l0lz"
+    password="l0lz"
 )
 
 cursor = conn.cursor()
@@ -23,3 +23,4 @@ for row in cursor.fetchall():
 print()
 
 # cursor.fetchone() and cursor.fetchmany() are also available
+conn.close()

@@ -10,7 +10,7 @@ pg_cursor = pg_conn.cursor()
 
 # select first name, last name from all presidents
 pg_cursor.execute('''
-    select firstname, lastname from presidents order by termnum
+    select firstname, lastname from presidents order by termnum desc
 ''')
 
 print(f"{pg_cursor.rowcount} rows in result set\n")

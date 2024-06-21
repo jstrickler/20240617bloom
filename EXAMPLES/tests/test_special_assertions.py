@@ -3,7 +3,6 @@ import math
 
 FILE_NAME = 'IDONOTEXIST.txt'
 
-
 # subject under test ####################################
 def read_file_data(file_name):
     with open(file_name) as file_in:
